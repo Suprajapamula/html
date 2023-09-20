@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"> 
+        <style>
+            #mainContainer{
+                background-color: rgb(213, 130, 143);
+                width:"500px";
+                margin-left: 450px;
+                margin-right: 450px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: 10%;
+            }
+        </style>   
+    </head>
+<body style="text-align:center">
+       <div id="mainContainer">
+        <h1 style="font-style: italic;">RATE FOR THE WORK</h1>
+        <div>
+        <span class="star bi bi-star" onclick="abc(event)" ></span>
+        <span class="star bi bi-star" onclick="abc(event)" ></span>
+        <span class="star bi bi-star" onclick="abc(event)" ></span>
+        <span class="star bi bi-star" onclick="abc(event)" ></span>
+        <span class="star bi bi-star" onclick="abc(event)" ></span>
+        </div>
+        <h1 id="d2">0/5</h1>
+       </div>
+<script>
+var star=document.getElementsByClassName("star");
+console.log(star[0]);
+for(var i=0;i<star.length;i++){
+        star[i].id=i;
+    }
+function abc(event){
+    for(var b=0;b<star.length;b++){
+        star[b].classList.remove("bi-star-fill");
+        star[b].classList.add("bi-star");
+    }
+    for(var a=0;a<=event.target.id;a++){
+        star[a].classList.remove("bi-star");
+        star[a].classList.add("bi-star-fill");
+    }
+    document.getElementById("d2").innerHTML=`${a}/${b}`;
+}
+</script>
+</body>
+</html>
